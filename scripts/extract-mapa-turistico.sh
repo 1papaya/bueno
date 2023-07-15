@@ -3,7 +3,7 @@ INPUT_KML="../data/prefeitura/Mapa Turístico Bueno Brandão.kml"
 
 ## cachoeiras
 ogr2ogr -sql "SELECT \
-    Name as nome, \
+    Name as name, \
     Endere__o as endereço, \
     Bairro as bairro, \
     Telefone as telefone, \
@@ -21,7 +21,7 @@ ogr2ogr -sql "SELECT \
 
 ## hospedagens
 ogr2ogr -sql "SELECT \
-    Name as nome, \
+    Name as name, \
     Endere__o as endereço, \
     Bairro as bairro, \
     Telefone as telefone, \
@@ -36,3 +36,6 @@ ogr2ogr -sql "SELECT \
     -f GeoJSON \
     "${OUTPUT_DIR}/hospedagens.geojson" \
     "${INPUT_KML}"
+
+## igrejas & capelas
+
